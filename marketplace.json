@@ -1,0 +1,17 @@
+{
+  "name": "easy-acc",
+  "owner": {
+    "name": "Rin Dokuso"
+  },
+  "metadata": {
+    "description": "Marketplace hosting the EASY-ACC Automation plugin for Claude.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "easy-acc-automation",
+      "source": "./",
+      "description": "Prepare, validate, and supervise data entry into the EASY-ACC Thai desktop accounting system (AR, AP, GL) via Cowork computer use, with company/period/path guards, field readback, and no blind save."
+    }
+  ]
+}

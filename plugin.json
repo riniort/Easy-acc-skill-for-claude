@@ -1,0 +1,20 @@
+{
+  "name": "easy-acc-automation",
+  "version": "1.1.0",
+  "description": "Prepare, validate, and supervise data entry into the EASY-ACC Thai desktop accounting system (AR, AP, GL). Claude normalizes source documents into validated transaction payloads and, when approved, drives the EASY-ACC Windows UI like a human via Cowork computer use — with company/period/path guards, field readback, and no blind save.",
+  "author": {
+    "name": "Rin Dokuso"
+  },
+  "keywords": [
+    "easy-acc",
+    "accounting",
+    "thai-accounting",
+    "data-entry",
+    "AR",
+    "AP",
+    "GL",
+    "VAT",
+    "computer-use"
+  ],
+  "license": "UNLICENSED"
+}
