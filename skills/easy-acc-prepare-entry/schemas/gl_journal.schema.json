@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "gl_journal.schema.json",
+  "title": "EASY-ACC GL Journal Fields",
+  "allOf": [{ "$ref": "easy_acc_transaction.schema.json" }],
+  "properties": {
+    "target_module": { "const": "GL" },
+    "target_screen_id": { "const": "UI-GL-TRANSACTION-ENTRY-v1" },
+    "transaction_type": { "const": "gl_journal" },
+    "fields": {
+      "type": "object",
+      "required": ["journal_book_code", "document_date", "document_no", "description", "lines"],
+      "properties": {
+        "journal_book_code": { "type": "string" },
+        "document_date": { "type": "string" },
+        "document_no": { "type": "string" },
+        "description": { "type": "string" },
+        "lines": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["account_code", "debit", "credit"],
+            "properties": {
+              "account_code": { "type": "string" },
+              "account_name": { "type": "string" },
+              "voucher_ref": { "type": "string" },
+              "line_date": { "type": "string" },
+              "debit": { "type": "number", "minimum": 0 },
+              "credit": { "type": "number", "minimum": 0 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

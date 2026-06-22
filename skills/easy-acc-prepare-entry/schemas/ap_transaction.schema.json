@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ap_transaction.schema.json",
+  "title": "EASY-ACC AP Transaction Fields",
+  "allOf": [{ "$ref": "easy_acc_transaction.schema.json" }],
+  "properties": {
+    "target_module": { "const": "AP" },
+    "target_screen_id": { "const": "UI-AP-TRANSACTION-ENTRY-v1" },
+    "fields": {
+      "type": "object",
+      "required": ["transaction_radio", "document_date", "vendor_code", "account_code", "amount_before_vat"],
+      "properties": {
+        "transaction_radio": { "enum": ["เจ้าหนี้", "เงินสด", "เช็ค"] },
+        "document_date": { "type": "string" },
+        "tax_invoice_no": { "type": "string" },
+        "vendor_code": { "type": "string" },
+        "account_code": { "type": "string" },
+        "amount_before_vat": { "type": "number" },
+        "discount": { "type": "number" },
+        "input_vat": { "type": "number" },
+        "input_vat_sequence_no": { "type": "string" },
+        "due_date": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}
